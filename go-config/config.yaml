@@ -1,0 +1,7 @@
+db: 
+  postgres: 
+    connMaxLifetime: "10s"
+    maxIdleConns: "10"
+    maxOpenConns: "100"
+    protocol: "tcp"
+    params: "sslmode=disable"
