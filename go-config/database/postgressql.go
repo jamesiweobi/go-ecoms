@@ -45,7 +45,8 @@ func (m *PostgresDatabase) Open(options Options) {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Sprintf("Connection opened on host: %s, port: %s, database: %s", options.Host, options.Port, options.DatabaseName)
+	fmt.Sprintf("Configuring database  connection on host: %s port:%d database: %s username:%s", options.Host,
+		options.Port, options.DatabaseName, options.User)
 	db.SetConnMaxLifetime(options.ConnMaxLifetime)
 	db.SetMaxIdleConns(options.MaxIdleConns)
 	db.SetMaxOpenConns(options.MaxOpenConns)
